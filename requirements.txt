@@ -1,3 +1,13 @@
-streamlit==1.21.0
-joblib==1.2.0
-scikit-learn==1.2.1
+Flask
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+numpy
+scipy
+scikit-learn
+matplotlib
+pandas
+flasgger
+streamlit
