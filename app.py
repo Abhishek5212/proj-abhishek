@@ -17,18 +17,18 @@ st.set_page_config(
 page_bg = f"""
 <style>
 [data-testid="stAppViewContainer"] {{
-background-color:#FCFCFC;
+background-color:#BEC6C3;
 
 }}
 [data-testid="stSidebar"] {{
-background-color:#61B136;s
+background-color:#FCDFCE;
 
 }}
 [data-testid="stHeader"] {{
-background-color:#FCFCFC;
+background-color:#626670;
 }}
 [data-testid="stToolbar"] {{
-background-color:#FCFCFC;
+background-color:#626670;
 
 }}
 </style>
