@@ -17,18 +17,18 @@ st.set_page_config(
 page_bg = f"""
 <style>
 [data-testid="stAppViewContainer"] {{
-background-color:#BEC6C3;
+background-color:#FF0000;
 
 }}
 [data-testid="stSidebar"] {{
-background-color:#FCDFCE;
+background-color:#000000;
 
 }}
 [data-testid="stHeader"] {{
-background-color:#626670;
+background-color:#FF0000;
 }}
 [data-testid="stToolbar"] {{
-background-color:#626670;
+background-color:#0000FF;
 
 }}
 </style>
@@ -49,12 +49,10 @@ with st.sidebar:
     image = Image.open('logo_cropify.png')
 
     st.image(image, width=300)
-    st.markdown("<h1 style='text-align: center;'>Crop Recommendation System using Random Forest Algorithm</h1>", unsafe_allow_html= True)
+    st.markdown("<h1 style='text-align: center;'>Crop Selector</h1>", unsafe_allow_html= True)
     st.markdown("""
         <h4 style='text-align: left;'>
-        This simple crop recommender system was trained using Random Forest Algorithm in giving
-        recommendations to farmers the best and suitable crop based on an Indian Crop 
-        Recommendation <a style='text-align: center; color: blue;' 
+       Crop Selector is an advanced agricultural tool designed to assist farmers in making informed decisions about which crops to cultivate based on specific environmental conditions. By harnessing the power of machine learning algorithms, Crop Selector analyzes a variety of key factors such as soil type, climate patterns, precipitation levels, and temperature ranges. <a style='text-align: center; color: blue;' 
         href="https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset">Dataset</a>.
         By inputing N, P, K, and pH values based on soil conditions, 
         weather conditions such as temperature, humidity, and rainfall, and regional location, the system can
@@ -136,7 +134,17 @@ if predict_btn:
         st.markdown(f"""<h5 style='text-align: center;'>Statistics Summary about NPK and Weather Conditions values for <b> {rdf_predicted_value[0]} 
             </b></h5>""", unsafe_allow_html=True)
         df_pred = df[df['label'] == rdf_predicted_value[0]]
-        st.dataframe(df_pred.describe(), use_container_width = True)        
+        st.dataframe(df_pred.describe(), use_container_width = True)
+        html_temp = """
+        <div class="" style="background-color:green;" >
+        <div class="clearfix">           
+        <div class="col-md-12">
+        <center><p style="font-size:20px;color:white;margin-top:10px;">Developed by Abhishek Kumar Singh</p></center> 
+        </div>
+        </div>
+        </div>
+        """
+        st.markdown(html_temp,unsafe_allow_html=True)
     
 
     
