@@ -69,7 +69,7 @@ with st.sidebar:
     X = df.drop('label', axis = 1)
     y = df['label']
 
-st.markdown("<h3 style='text-align: center;'>Please input the feature values to predict the best crop to plant.</h3><br>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Crop Recommendation System</h3><br>", unsafe_allow_html=True)
 
 
 col1, col2, col3, col4, col5, col6, col7 = st.columns([1,1,4,1,4,1,1], gap = 'medium')
@@ -131,12 +131,12 @@ if predict_btn:
             st.markdown(f"""<h5 style = 'text-align: left; height: 300px; object-fit: contain;'> {df_image} </h5>""", unsafe_allow_html=True)
         
 
-        st.markdown(f"""<h5 style='text-align: center;'>Statistics Summary about NPK and Weather Conditions values for <b> {rdf_predicted_value[0]} 
+        st.markdown(f"""<h5 style='text-align: center;'>Description about NPK and Weather Conditions values for <b> {rdf_predicted_value[0]} 
             </b></h5>""", unsafe_allow_html=True)
         df_pred = df[df['label'] == rdf_predicted_value[0]]
         st.dataframe(df_pred.describe(), use_container_width = True)
         html_temp = """
-        <div class="" style="background-color:green;" >
+        <div class="" style="background-color:blue;" >
         <div class="clearfix">           
         <div class="col-md-12">
         <center><p style="font-size:20px;color:white;margin-top:10px;">Developed by Abhishek Kumar Singh</p></center> 
